@@ -1,4 +1,20 @@
-console.log('rock paper scissors');
+//add event listener to each button
+
+const rockBtn = document.querySelector("#rockBtn");
+
+const paperBtn = document.querySelector("#paperBtn");
+
+const scissorBtn = document.querySelector("#scissorBtn");
+
+rockBtn.addEventListener("click", () => {
+    playGame();
+});
+
+
+
+
+
+
 
 //function getComputerChoice: randomly return either rock, paper, or scissor
 // used to make the computers choice. 
@@ -75,4 +91,4 @@ function playGame() {
 
 }
 
-console.log(playGame());
+//console.log(playGame());
