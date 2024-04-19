@@ -1,0 +1,7 @@
+
+===3 Ways to Include JS in html===
+
+    1. place js code inside a paired <script> tag inside the head
+    2. connect an external js file
+    3. wirte the code directly inside the html tag using special
+        attributes. 
