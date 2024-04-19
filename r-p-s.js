@@ -55,11 +55,11 @@ function playRound(playerSelection, computerSelection) {
 //function playGame: expects nothing; and plays rockpaperscissors 5 times; 
 //prompting the user for there input each round. 
 function playGame() {
-    for (i = 0; i < 5; i++) {
-        let playerSelection = prompt("choose rock, paper, scissors").toLowerCase();
-        while (playerSelection != 'rock' && playerSelection != 'paper' && playerSelection != 'scissors') {
-            playerSelection = prompt('not valid choose again').toLowerCase();
-        }
+
+    let playerSelection = prompt("choose rock, paper, scissors").toLowerCase();
+    while (playerSelection != 'rock' && playerSelection != 'paper' && playerSelection != 'scissors') {
+        playerSelection = prompt('not valid choose again').toLowerCase();
+
         console.log(playRound(playerSelection, getComputerChoice()));
 
     }
