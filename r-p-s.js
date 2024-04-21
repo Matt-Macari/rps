@@ -7,7 +7,18 @@ const paperBtn = document.querySelector("#paperBtn");
 const scissorBtn = document.querySelector("#scissorBtn");
 
 rockBtn.addEventListener("click", () => {
-    playGame();
+    let playerSelection = "rock";
+    console.log(playRound(playerSelection, getComputerChoice()));
+});
+
+paperBtn.addEventListener("click", () => {
+    let playerSelection = "paper";
+    console.log(playRound(playerSelection, getComputerChoice()));
+});
+
+scissorBtn.addEventListener("click", () => {
+    let playerSelection = "scissors";
+    console.log(playRound(playerSelection, getComputerChoice()));
 });
 
 
