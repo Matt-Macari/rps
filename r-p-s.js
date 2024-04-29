@@ -6,23 +6,34 @@ const paperBtn = document.querySelector("#paperBtn");
 
 const scissorBtn = document.querySelector("#scissorBtn");
 
+const game_result = document.getElementById("game_result");
+
+const match_results = document.getElementById("match_results");
+
+
 rockBtn.addEventListener("click", () => {
     let playerSelection = "rock";
-    game_results.textContent = playRound(playerSelection, getComputerChoice());
+    match_results.textContent = playRound(playerSelection, getComputerChoice());
+    compareScore();
 });
 
 paperBtn.addEventListener("click", () => {
     let playerSelection = "paper";
-    game_results.textContent = playRound(playerSelection, getComputerChoice());
+    match_results.textContent = playRound(playerSelection, getComputerChoice());
+    compareScore();
 });
 
 scissorBtn.addEventListener("click", () => {
     let playerSelection = "scissors";
-    game_results.textContent = playRound(playerSelection, getComputerChoice());
+    match_results.textContent = playRound(playerSelection, getComputerChoice());
+    compareScore();
 });
 
-//add a div for displaying results
-const game_results = document.getElementById("game_results");
+//add a div for displaying result
+
+
+
+
 
 
 
@@ -62,6 +73,7 @@ function playRound(playerSelection, computerSelection) {
         playerScore++;
         return `you chose ${playerSelection} and the computer chose ${computerSelection} you win.`;
 
+
     }
 
     else if (playerSelection == 'paper' && computerSelection == 'rock') {
@@ -83,27 +95,91 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
+function compareScore() {
+    let scoreMessage;
+    if (playerScore === 5) {
+        scoreMessage = `Winner. You won ${playerScore} times and the computer won ${compScore} times.`;
+        playerScore = 0;
+        compScore = 0;
+    } else if (compScore === 5) {
+        scoreMessage = `Loser. You won ${playerScore} times and the computer won ${compScore} times.`;
+        playerScore = 0;
+        compScore = 0;
+    }
+
+    game_result.textContent = scoreMessage;
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //function playGame: expects nothing; and plays rockpaperscissors 5 times; 
 //prompting the user for there input each round. 
+/*
 function playGame() {
 
-    let playerSelection = prompt("choose rock, paper, scissors").toLowerCase();
-    while (playerSelection != 'rock' && playerSelection != 'paper' && playerSelection != 'scissors') {
-        playerSelection = prompt('not valid choose again').toLowerCase();
+    //let playerSelection = prompt("choose rock, paper, scissors").toLowerCase();
+    //while (playerSelection != 'rock' && playerSelection != 'paper' && playerSelection != 'scissors') {
+    // playerSelection = prompt('not valid choose again').toLowerCase();
 
-        console.log(playRound(playerSelection, getComputerChoice()));
+    // console.log(playRound(playerSelection, getComputerChoice()));
 
-    }
-    if (playerScore > compScore) {
-        console.log(`Winner. you won ${playerScore} times and the computer won ${compScore} times`);
-    }
-    else if (playerScore < compScore) {
-        console.log(`Loser. you won ${playerScore} times and the computer won ${compScore} times`);
-    }
-    else {
-        console.log(`Tie. you won ${playerScore} times and the computer won ${compScore} times`);
-    }
+    //}
 
-}
+    while (playerScore == 5 || compScore == 5) {
+        if (playerScore > compScore) {
+            let score = `Winner. you won ${playerScore} times and the computer won ${compScore} times`;
 
-//console.log(playGame());
+        }
+        else if (playerScore < compScore) {
+            let score = `Loser. you won ${playerScore} times and the computer won ${compScore} times`;
+
+        }
+        else {
+            let score = `Tie. you won ${playerScore} times and the computer won ${compScore} times`;
+
+        }
+    };
+}; */
+
+//reference to game_result for overall score
+
+
+
+
+
+
