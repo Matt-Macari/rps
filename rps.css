@@ -1,0 +1,40 @@
+body {
+    background-color: azure;
+}
+
+h1 {
+    text-align: center;
+}
+
+.button-box {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+button {
+    padding: 4em;
+    background-color: white;
+    border: .25em solid black;
+    border-radius: .5em;
+}
+
+
+
+#match_results,
+#game_result {
+    text-align: center;
+    margin-top: 3em;
+}
+
+p {
+    text-align: center;
+    margin-top: 3em;
+}
+
+span {
+    font-size: 5em;
+}
+
+.scissor {
+    padding: .2em;
+}
